@@ -12,17 +12,19 @@ g = 9.8; % [m/s/s]
 gamma = 0.8;
 
 % create two ball objects
-ball1 = Ball(0,10,1,0);
-ball2 = Ball(3,12,2,1);
+for i=1:10
+    ball(i) = Ball(10*rand()-5,rand(),10*rand()-5,10*rand()-5);
+end
 
 % loop through time steps
 for k = 1:numel(time)-1
-    ball1.move(g,dt,gamma);
-    ball2.move(g,dt,gamma);
+    for i=1:10
+        ball(i).move(g,dt,gamma);
+    end
 end
 
 % plot
 fig = figure;
-ball1.plot_trajectory(fig)
-ball2.plot_trajectory(fig)
-
+for i=1:10
+    ball(i).plot_trajectory(fig)
+end
