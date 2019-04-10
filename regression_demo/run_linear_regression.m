@@ -1,4 +1,4 @@
-function theta = regression_example(X,Y,orders,doplot)
+function theta = run_linear_regression(X,Y,orders,doplot)
 
 x = linspace(min(X),max(X))';
 

@@ -24,7 +24,7 @@ num_var = size(aData,2);
 
 % matrix scatter plot
 figure
-[~,AX,~,~,~] = plotmatrix(aData);
+[~,ax,~,~,~] = plotmatrix(aData);
 for i=1:num_var
     for j=1:num_var
         set(AX(i,j).Children,'MarkerSize',8)
@@ -33,8 +33,8 @@ end
 
 for i=1:num_var
     var_name = Data.Properties.VariableNames{i};
-    xlabel(AX(num_var,i),var_name,'FontWeight','bold')
-    ylabel(AX(i,1),var_name,'FontWeight','bold')
+    xlabel(ax(num_var,i),var_name,'FontWeight','bold')
+    ylabel(ax(i,1),var_name,'FontWeight','bold')
 end
 
 % covariance matrix
