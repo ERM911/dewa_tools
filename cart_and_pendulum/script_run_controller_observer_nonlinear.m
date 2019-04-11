@@ -22,7 +22,7 @@ K = design_controller(A,B,closed_loop_poles);
 
 % run the closed loop system using 'ode45'
 x0 = 0.1*[0 1 0.02*pi 0]';
-e0 = [0.04 0 .23 0]';
+e0 = 2*[0.04 0 .23 0]';
 xhat0 = x0-e0;
 xxhat0 = [x0;xhat0];
 [time,x_traj] = ode45(@(t,xxhat) fobs(xxhat,params,A,B,C,L,K), [0 10], xxhat0);

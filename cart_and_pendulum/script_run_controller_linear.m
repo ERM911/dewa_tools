@@ -10,7 +10,7 @@ params = get_parameters();
 [A,B] = get_linearization(eq,params);
 
 % choose the closed loop poles and compute the controller gain
-closed_loop_poles = [-3 -2 -1 -2.5];
+closed_loop_poles = 10*[-3 -2 -1 -2.5];
 K = design_controller(A,B,closed_loop_poles);
 
 % create a state space object for the closed loop system using 'ss'

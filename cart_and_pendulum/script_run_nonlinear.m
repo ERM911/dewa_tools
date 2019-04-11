@@ -5,7 +5,7 @@ close all
 params = get_parameters();
 
 % initial condition and time span
-x0 = [0 -1 0 1];
+x0 = [0 -10 0 1];
 tspan = [0 20];
 
 % integrate the model

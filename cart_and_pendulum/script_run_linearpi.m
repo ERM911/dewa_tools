@@ -9,7 +9,7 @@ ic = [0 -1 0 1];
 tspan = [0 20];
 
 % control action
-F = 1;
+F = 0;
 
 % integrate the model
 [A,B] = get_linearization('pi',params);
